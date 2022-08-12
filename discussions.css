@@ -1,0 +1,465 @@
+html {
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --body-font: 16px;
+    --fs-submenu-a: 13px;
+    --header-font: 18px;
+    --primary-color: hsl( 120, 100%, 18%);
+    --white-background-a-hover: rgb(0, 51, 51);
+    --green-background-a-hover: rgb(114, 227, 120);
+    --fs-sidebar: 22px;
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+header nav ul {
+    display: flex;
+}
+
+.nav-bar .flex-1 li {
+    display: inline-block;
+    padding: 0 60px;
+}
+
+.flex-1 a {
+    color: hsl( 120, 100%, 18%);
+}
+
+.flex-1 a:hover {
+    color: rgb( 0, 51, 51);
+}
+
+img[alt="user"] {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.sub-menu-1 a {
+    color: white;
+    font-size: 12px;
+}
+
+.sub-menu-1 a:hover {
+    color: rgb(114, 227, 120);
+}
+
+.nav-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background-color: hsl( 120, 100%, 18%);
+    color: white;
+    margin-left: -20px;
+}
+
+.nav-bar ul li:hover .sub-menu-1 ul {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.nav-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 9px 10px;
+    border-bottom: 0.5px solid white;
+    text-align: left;
+}
+
+.nav-bar ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.sub-menu-0 {
+    display: none;
+}
+
+.sub-menu-0 {
+    background-color: hsl( 120, 100%, 18%);
+}
+
+.sub-menu-0 a {
+    color: white;
+}
+
+.sub-menu-0 a:hover {
+    color: rgb(114, 227, 120);
+}
+
+.nav-bar ul .last-navbar-link:hover .sub-menu-0 {
+    display: block;
+    position: absolute;
+    text-align: left;
+    font-size: 13px;
+}
+
+.nav-bar ul .last-navbar-link:hover .sub-menu-0 ul {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+}
+
+.nav-bar ul .last-navbar-link:hover .sub-menu-0 ul li {
+    padding: 10px;
+    border-bottom: 0.5px solid white
+}
+
+.nav-bar ul .last-navbar-link:hover .sub-menu-0 ul li:last-child {
+    border-bottom: none;
+}
+
+a[href="./profile.html"] {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 2px;
+    padding-left: 10px;
+    justify-content: center;
+    padding-right: 80px;
+}
+
+#tool-tip {
+    position: absolute;
+    margin-top: 27px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsla( 120, 100%, 18%, 0.6);
+    color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#tool-tip::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+}
+
+a[href="./profile.html"]:hover #tool-tip {
+    left: -40%;
+    top: 7px;
+    visibility: visible;
+    transition: opacity 0.75s;
+    opacity: 1;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    width: 375px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 60px;
+    border: 1px solid var(--primary-color);
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    flex: 1;
+    outline: none;
+    padding: 2px 6px;
+    font-size: var(--body-font);
+    color: var(--white-background-a-hover);
+}
+
+::placeholder {
+    color: var(--primary-color);
+}
+
+body {
+    background-color: rgb( 245, 245, 245);
+}
+
+.search-bar button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(114, 227, 120, 0.5);
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 40px 35px;
+    background-color: rgb( 245, 245, 245);
+    box-shadow: 0 0 20px rgba( 0, 0, 0, .25);
+}
+
+.content-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.5px solid var(--primary-color);
+    padding-bottom: 20px;
+    margin-top: -15px;
+}
+
+.content-button button {
+    width: 150px;
+    min-width: 100px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 3px rgba( 0, 0, 0, .2);
+    transition: all 0.4s;
+}
+
+.content-button button a {
+    color: white;
+    font-size: 16px;
+}
+
+.content-button button:hover {
+    background-color: rgb( 0, 51, 51)
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--primary-color);
+}
+
+.content a {
+    color: var(--primary-color);
+}
+
+.content a:hover {
+    color: var(--white-background-a-hover);
+}
+
+.content-body {
+    padding: 5px;
+    width: 100%;
+}
+
+blockquote {
+    /*background-color: var(--primary-color);*/
+    border-radius: 12px;
+    background-color: rgb( 230, 230, 230);
+    color: var(--primary-color);
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.content-body blockquote a {
+    color: var(--primary-color)
+}
+
+.content .content-body blockquote a:hover {
+    color: var(--white-background-a-hover);
+}
+
+.time {
+    color: grey;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.content-container {
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+    border-bottom: 0.5px solid var(--primary-color);
+}
+
+.content .first {
+    padding-top: 10px;
+}
+
+.content-head {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.fa-user {
+    font-size: var(--fs-sidebar)
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 10px;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+.main-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav span {
+    display: flex;
+    gap: 10px;
+}
+
+.main-nav button {
+    border: none;
+    padding: 6px 8px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba( 0, 0, 0, 0.2);
+    transition: all 0.4s;
+}
+
+.main-nav button:hover {
+    background-color: var(--white-background-a-hover)
+}
+
+.main-nav button a {
+    color: white;
+    font-size: 12px;
+}
+
+.main-nav button:hover a {
+    color: white
+}
+
+.main-nav button a:hover {
+    color: white;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    border-top: 0.5px solid var(--primary-color);
+    color: var(--primary-color);
+    margin-top: 20px
+}
+
+
+/*.footer-socials ul li:hover .sub-menu-3 {
+    display: block;
+    position: absolute;
+    margin-left: -10px;
+    width: 100px;
+    background-color: hsl( 120, 100%, 18%);
+}
+
+.footer-socials ul li:hover .sub-menu-3 ul {
+    display: block;
+    padding: 3px;
+}
+
+.footer-socials ul li:hover .sub-menu-3 ul li {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 0.5px solid white;
+    font-size: 12px;
+}
+
+.footer-socials ul li:hover .sub-menu-3 ul li:last-child {
+    border-bottom: none;
+}
+
+.sub-menu-4 {
+    display: none;
+    font-size: 12px;
+}
+
+.sub-menu-4 a {
+    color: white;
+}
+
+.sub-menu-4 a:hover {
+    color: rgb(114, 227, 120);
+}
+
+.footer-contact ul li:hover .sub-menu-4 {
+    display: block;
+    position: absolute;
+    margin-left: -10px;
+    background-color: hsl( 120, 100%, 18%);
+    width: 125px;
+}
+
+.footer-contact ul li:hover .sub-menu-4 ul {
+    display: block;
+    padding-right: 10px;
+    padding-left: -4px;
+    margin-left: -10px;
+}
+
+.footer-contact ul li:hover .sub-menu-4 ul li {
+    border-bottom: 0.5px solid white;
+    padding: 10px;
+    margin-left: -15px;
+}
+
+.footer-contact ul li:hover .sub-menu-4 ul li:last-child {
+    border-bottom: none;
+}
+
+.last {
+    font-size: 10px;
+    padding-left: 2px;
+}*/
+
+.copyright {
+    font-size: 12px;
+    /*padding-top: 40px;*/
+    padding-top: 10px;
+    text-align: center;
+    color: hsl( 120, 100%, 18%);
+}
