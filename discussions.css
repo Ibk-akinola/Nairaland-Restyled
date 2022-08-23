@@ -13,6 +13,8 @@ html {
     --fs-sidebar: 22px;
     --blockquote-color: #4f4f4f;
     --content-color: #222222;
+    --time-color: grey;
+    --action-color: grey;
 }
 
 * {
@@ -306,7 +308,7 @@ blockquote {
 }
 
 .time {
-    color: grey;
+    color: var(--time-color);
     font-size: 12px;
     font-weight: 700;
 }
@@ -342,6 +344,7 @@ blockquote {
 
 .actions a {
     font-weight: 500;
+    color: var(--action-color);
 }
 
 img,
