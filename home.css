@@ -193,7 +193,6 @@ a[href="./profile.html"]:hover #tool-tip {
     display: flex;
     height: 82vh;
     align-items: center;
-    padding-left: min(100px, 10%);
     background-color: hsla( 120, 100%, 18%, 0.05);
     line-height: 4.5em;
     width: 100%;
@@ -202,16 +201,18 @@ a[href="./profile.html"]:hover #tool-tip {
 .intro-content {
     display: flex;
     flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .welcome {
-    font-size: clamp(3.5rem, 5.5vh, 7rem);
+    font-size: 3.5rem;
     font-weight: 500;
     color: hsl( 120, 100%, 18%);
 }
 
 .naira {
-    font-size: clamp(6rem, 7.5vh, 9rem);
+    font-size: 5.5rem;
     font-weight: 900;
     color: hsl(120, 100%, 18%);
 }

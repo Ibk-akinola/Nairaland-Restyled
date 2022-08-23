@@ -11,6 +11,8 @@ html {
     --white-background-a-hover: rgb(0, 51, 51);
     --green-background-a-hover: rgb(114, 227, 120);
     --fs-sidebar: 22px;
+    --blockquote-color: #4f4f4f;
+    --content-color: #222222;
 }
 
 * {
@@ -270,7 +272,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    color: var(--primary-color);
+    color: var(--content-color);
 }
 
 .content a {
@@ -290,7 +292,7 @@ blockquote {
     /*background-color: var(--primary-color);*/
     border-radius: 12px;
     background-color: rgb( 230, 230, 230);
-    color: var(--primary-color);
+    color: var(--blockquote-color);
     padding: 20px;
     margin: 10px 0;
 }
@@ -335,7 +337,11 @@ blockquote {
     display: flex;
     justify-content: flex-start;
     gap: 50px;
-    padding: 10px;
+    padding: 12px 0;
+}
+
+.actions a {
+    font-weight: 500;
 }
 
 img,
